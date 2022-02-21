@@ -1,0 +1,135 @@
+<!doctype html>
+<!-- Designed in a 2560x1600 resolution display -->
+<head>
+	<link rel="stylesheet" href="main.css">
+	<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<script type="text/javascript" charset="utf-8">
+        fetch("https://akashgujju.github.io/data.json")
+            .then(function (response) {
+                return response.json();
+            }).then(function (apiJsonData) {
+            	console.log(apiJsonData);
+				display_section2(apiJsonData);
+				display_section3(apiJsonData);
+				display_section4(apiJsonData);
+            })
+    </script>
+</head>
+<body>
+	<div style="width: 1425px; margin:0">
+		<div class="sticky-container"></div>
+		<!-- ----------------Section: 1------------------- -->
+		<div class="top-container">
+			<div class="top-text-container">
+				<ul id="list1">
+					<li><a class="index_a" href="index.html" style="left: 470px">Home</a></li>
+					<li><a class="index_a" href="explore.html" style="left: 650px">Explore</a></li>
+					<li><a class="index_a" href="explore.html" style="left: 850px">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="image-container">
+			<div class="image-container-inner">
+				<img>
+				<p class="text1">LA - The City of Angels</p>
+			</div>
+		</div>
+		<!-- -----End of Section: 1  -------------------- -->
+		<!-- -------------Section: 2--------------------- -->
+		<script type="text/javascript">
+			function display_section2(data){
+				document.getElementById("GR_01").src = data["section2"][0]["image"];
+				document.getElementById("GR_02").innerHTML = data["section2"][0]["heading"];
+				document.getElementById("GR_03").innerHTML = data["section2"][0]["text"];
+				document.getElementById("MO_01").src = data["section2"][1]["image"];
+				document.getElementById("MO_02").innerHTML = data["section2"][1]["heading"];
+				document.getElementById("MO_03").innerHTML = data["section2"][1]["text"];
+				document.getElementById("US_01").src = data["section2"][2]["image"];
+				document.getElementById("US_02").innerHTML = data["section2"][2]["heading"];
+				document.getElementById("US_03").innerHTML = data["section2"][2]["text"];
+			}
+		</script>
+		<div class="center-container">
+			<div class="column" style="margin-left: 220px">
+				<div class="card">
+					<img src="" id="GR_01">
+					<text id="GR_02"></text>
+					<p id="GR_03"></p>
+				</div>
+			</div>
+			<div class="column">
+				<div class="card">
+					<img src="" id="MO_01">
+					<text id="MO_02"></text>
+					<p id="MO_03"></p>
+				</div>
+			</div>
+			<div class="column">
+				<div class="card">
+					<img src="" id="US_01">
+					<text id="US_02"></text>
+					<p id="US_03"></p>
+				</div>
+			</div>
+		</div>
+		<!-- ---------------------End of Section: 2------------------------- -->
+		<!-- --------------------------Section: 3--------------------------- -->
+		<script>
+			function display_section3(data){
+				document.getElementById("SE_01").innerHTML = data["section3"]["text"][0];
+				document.getElementById("SE_02").innerHTML = data["section3"]["text"][1];
+			}
+		</script>
+		<div class="section3-container">
+			<div class="section3-inner-container">
+				<img src="images/lasky.png">
+				<p id="SE_01"></p>
+				<p id="SE_02"></p>
+			</div>
+		</div>
+		<!-- ---------------------End of Section: 3------------------------- -->
+		<!-- ------------------------Section: 4----------------------------- -->
+		<script type="text/javascript">
+			function display_section4(data){
+				document.getElementById("HW_01").src = data["section4"][0]["image"];
+				document.getElementById("HW_02").innerHTML = data["section4"][0]["heading"];
+				document.getElementById("HW_03").innerHTML = data["section4"][0]["text"];
+				document.getElementById("BE_01").src = data["section4"][1]["image"];
+				document.getElementById("BE_02").innerHTML = data["section4"][1]["heading"];
+				document.getElementById("BE_03").innerHTML = data["section4"][1]["text"];
+			}
+		</script>
+		<div class="section4-container">
+			<div class="section4-inner-container" style="margin-top: 140px;">
+				<img id="HW_01" style="float: left; padding-right: 25px;">
+				<text id="HW_02" style="float: left"></text>
+				<br><br><br>
+				<p id="HW_03"></p>
+			</div>
+			<div class="section4-inner-container" style="margin-bottom: 140px;">
+				<img id="BE_01" style="float: right; padding-left: 25px;">
+				<text id="BE_02" style="float: right"></text>
+				<br><br><br>
+				<p id="BE_03"></p>
+			</div>
+		</div>
+		<!-- ------------------End of Section: 4----------------------------- -->
+		<!-- -----------------------Section: 5------------------------------- -->
+		<div class="section5-container">
+			<div class="footer">
+				<div class="footer_left">
+					<text class="f_01">Tip the world over on its side and everything loose will land in Los Angeles<br><br><b>- Frank Lloyd Wright</b></text>
+				</div>
+				<div class="footer_right" style="float: right">
+					<text class="f_02" style="font-size: 20px; font-weight: bold;">Designed By</text><br><br>
+					<text class="f_02">Akash Gujju</text><br><br>
+					<a class="f_02_01" href="mailto:gujju@usc.edu">gujju@usc.edu</a>
+					<br><a class="f_02_01" style="margin-top: 10px;" href="tel:+1-213-551-3894">(+1) 213 551 3894</a>
+				</div>
+			</div>
+		</div>
+		<!-- ------------------End of Section: 5----------------------------- -->
+	</div>
+</body>
+</html> 

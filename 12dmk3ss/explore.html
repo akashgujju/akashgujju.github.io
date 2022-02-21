@@ -1,0 +1,61 @@
+<!-- Designed in a 2560x1600 resolution display -->
+<!doctype html>
+<head>
+	<link rel="stylesheet" href="main.css">
+	<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<script type="text/javascript" charset="utf-8">
+        fetch("https://akashgujju.github.io/data.json")
+            .then(function (response) {
+                return response.json();
+            }).then(function (apiJsonData) {
+            	console.log(apiJsonData);
+				display_section2(apiJsonData);
+				display_section3(apiJsonData);
+				display_section4(apiJsonData);
+            })
+    </script>
+</head>
+<body>
+	<div style="width: 1425px;">
+		<div class="sticky-container"></div>
+		<!-- ----------------Section: 1------------------- -->
+		<div class="top-container">
+			<div class="top-text-container">
+				<ul id="list1">
+					<li><a class="explore_a" href="index.html" style="left: 470px">Home</a></li>
+					<li><a class="explore_a" href="explore.html" style="left: 650px">Explore</a></li>
+					<li><a class="explore_a" href="explore.html" style="left: 850px">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="image-container">
+			<div class="image-container-inner-2">
+				<img>
+				<p class="text2">Page Not Found</p>
+			</div>
+		</div>
+		<!-- ----------------End of Section: 1-------------------------------- -->
+		<!-- --------------------------Section: 2.5--------------------------- -->
+		<div class="section25-container">
+			<p>The page you were looking for could not be found.<br> It might have been removed, renamed or does not exist in the first place!</p>
+		</div>
+		<!-- ---------------------End of Section: 2.5------------------------- -->
+		<!-- -----------------------Section: 5------------------------------- -->
+		<div class="section5-container">
+			<div class="footer">
+				<div class="footer_left">
+					<text class="f_01">Tip the world over on its side and everything loose will land in Los Angeles<br><br><b>- Frank Lloyd Wright</b></text>
+				</div>
+				<div class="footer_right" style="float: right">
+					<text class="f_02" style="font-size: 20px; font-weight: bold;">Designed By</text><br><br>
+					<text class="f_02">Akash Gujju</text><br><br>
+					<a class="f_02_01" href="mailto:gujju@usc.edu">gujju@usc.edu</a>
+					<br><a class="f_02_01" style="margin-top: 10px;" href="tel:+1-213-551-3894">(+1) 213 551 3894</a>
+				</div>
+			</div>
+		</div>
+		<!-- ------------------End of Section: 5----------------------------- -->
+	</div>
+</body>
+</html> 
